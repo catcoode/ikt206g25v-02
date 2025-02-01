@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
     - uses: actions/checkout@v4
 
     - name: Setup .NET
@@ -28,6 +27,6 @@ jobs:
 
     - name: Build
       run: dotnet build --no-restore
-      
+
     - name: Test
       run: dotnet test --no-build --verbosity normal
